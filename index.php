@@ -15,7 +15,7 @@
     <div class="container text-center p-5 mt-5 rounded-5" style="background-color: #E5EFFE">
     
         <h1>
-            *****
+            Censura
         </h1>
 
     </div>
@@ -29,7 +29,7 @@
             </div>
             <div class="d-flex flex-column gap-2">
                 <label for="badword">Parola da censurare</label>
-                <input id="badword" name="badword" type="text" placeholder="******" class="border-0 p-2 rounded-3">
+                <input id="badword" name="badword" type="text" placeholder="es: bitcoin" class="border-0 p-2 rounded-3">
             </div>
             <input type="submit" class="px-5 py-2 bg-primary rounded-3 border border-primary text-white">
         </form>
