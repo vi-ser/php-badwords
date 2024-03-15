@@ -13,7 +13,11 @@ $length = count($splitParagraph);
 
 // ciclo su tutte le parole dell'array e, se presente, sostituisco la parola da censurare con '***'
 for ($i = 0; $i < $length; $i++) {
-    if ($splitParagraph[$i] == $badword) {
+
+    $word = preg_replace("/[^A-Za-z0-9]/", '', $splitParagraph[$i]);
+
+    if ($word == $badword) {
+        
         $splitParagraph[$i] = '***';
     }
 }
