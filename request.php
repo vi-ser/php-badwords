@@ -3,27 +3,7 @@
 $paragraph = $_GET['paragraph'];
 $badword = $_GET['badword'];
 
-// trasformo la stringa in un array di parole
-$splitParagraph = explode(" ", $paragraph);
-
-// var_dump ($splitParagraph);
-
-// creo una variabile con la lunghezza dell'array di parole
-$length = count($splitParagraph);
-
-// ciclo su tutte le parole dell'array e, se presente, sostituisco la parola da censurare con '***'
-for ($i = 0; $i < $length; $i++) {
-
-    $word = preg_replace("/[^A-Za-z0-9]/", '', $splitParagraph[$i]);
-
-    if ($word == $badword) {
-        
-        $splitParagraph[$i] = '***';
-    }
-}
-
-// ricompongo la stringa
-$censoredParagraph = implode(" ", $splitParagraph);
+$censoredParagraph = str_ireplace($badword, '***', $paragraph);
 
 ?>
 <!DOCTYPE html>
